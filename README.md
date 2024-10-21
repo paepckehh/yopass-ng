@@ -1,11 +1,35 @@
 
 
-# yopass-multilang
+# YOPASS-MULTILANG
 
-- [x] will provide multilingual support out-of-the-box 
-- [x] follows strict, transparent & verifyable upstream codebase 
-- [x] all changes (pull requests) outside of website/public/locales will be denied
-- [x] international translation support (pull requests) are welcome
+[github.com/jhaals/yopass](https://github.com/jhaals/yopass) as convinient, all-in-one embedded, multilingual & secure single binary
+
+- [x] will provide multilingual http server out-of-the-box 
+- [x] one single easy to handle static binary (needs only memchached or redis db)
+- [x] will have no external file system dependencies, all website resources are embedded
+- [x] follows strict, transparent & verifyable the upstream codebase
+- [x] easy to diff & transparently to review minimal codebase changes 
+- [x] security: will by default apply a hardened http/tls13 profile (disable via --tls-hardening=false)  
+- [x] security: will reduce the risk of website / file system malware / js inject by embedd all resources
+- [x] international translation support (pull requests for /locales/*.json) are welcome
+
+
+# OVERVIEW 
+[![Go Reference](https://pkg.go.dev/badge/paepcke.de/yopass-multilang.svg)](https://pkg.go.dev/paepcke.de/yopass-multilang) 
+[![Go Report Card](https://goreportcard.com/badge/paepcke.de/yopass-multilang)](https://goreportcard.com/report/paepcke.de/yopass-multilang) 
+[![SemVer](https://img.shields.io/github/v/release/paepckehh/yopass-multilang)](https://github.com/paepckehh/yopass-multilang/releases/latest)
+
+[paepcke.de/yopass-multilang](https://paepcke.de/yopass-multilang/)
+
+
+# ⚡️HOW TO INSTALL VIA GO 
+```
+go install paepcke.de/yopass-multilang/cmd/yopass-multilang@latest
+```
+
+# DOWNLOAD PRE-BUILD PACKAGES
+[https://github.com/paepckehh/yopass-multilang/releases](https://github.com/paepckehh/yopass-multilang/releases)
+
 
 ---
 

@@ -14,7 +14,6 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/jhaals/yopass/pkg/server"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/collectors"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -22,6 +21,7 @@ import (
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
+	"paepcke.de/yopass-multilang/pkg/server"
 )
 
 var logLevel zapcore.Level
@@ -37,11 +37,14 @@ func init() {
 	pflag.String("tls-cert", "", "path to TLS certificate")
 	pflag.String("tls-key", "", "path to TLS key")
 	pflag.Bool("force-onetime-secrets", false, "reject non onetime secrets from being created")
+	pflag.Bool("tls-hardening", true, "apply tls hardening (tls13, defaults to true)")
 	pflag.CommandLine.AddGoFlag(&flag.Flag{Name: "log-level", Usage: "Log level", Value: &logLevel})
 
 	viper.AutomaticEnv()
 	viper.SetEnvKeyReplacer(strings.NewReplacer("-", "_"))
-	_ = viper.BindPFlags(pflag.CommandLine)
+	if err := viper.BindPFlags(pflag.CommandLine); err != nil {
+		fmt.Println(err)
+	}
 
 	pflag.Parse()
 }
@@ -63,6 +66,15 @@ func main() {
 		Addr:      fmt.Sprintf("%s:%d", viper.GetString("address"), viper.GetInt("port")),
 		Handler:   y.HTTPHandler(),
 		TLSConfig: &tls.Config{MinVersion: tls.VersionTLS12},
+	}
+	if cert != "" && viper.GetBool("tls-hardening") {
+		yopassSrv = &http.Server{
+			TLSConfig: &tls.Config{
+				NextProtos: []string{"http/1.1"},
+				MaxVersion: tls.VersionTLS13,
+				MinVersion: tls.VersionTLS13,
+			},
+		}
 	}
 	go func() {
 		logger.Info("Starting yopass server", zap.String("address", yopassSrv.Addr))

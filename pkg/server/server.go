@@ -1,7 +1,9 @@
 package server
 
 import (
+	"embed"
 	"encoding/json"
+	"io/fs"
 	"net/http"
 	"strconv"
 	"strings"
@@ -142,6 +144,9 @@ func (y *Server) optionsSecret(w http.ResponseWriter, _ *http.Request) {
 	w.Header().Set("Access-Control-Allow-Methods", strings.Join([]string{http.MethodGet, http.MethodDelete, http.MethodOptions}, ","))
 }
 
+//go:embed static/website/build/*
+var static embed.FS
+
 // HTTPHandler containing all routes
 func (y *Server) HTTPHandler() http.Handler {
 	mx := mux.NewRouter()
@@ -157,7 +162,9 @@ func (y *Server) HTTPHandler() http.Handler {
 	mx.HandleFunc("/file/"+keyParameter, y.deleteSecret).Methods(http.MethodDelete)
 	mx.HandleFunc("/file/"+keyParameter, y.optionsSecret).Methods(http.MethodOptions)
 
-	mx.PathPrefix("/").Handler(http.FileServer(http.Dir("public")))
+	root, _ := fs.Sub(static, "static/website/build")
+	mx.PathPrefix("/").Handler(http.FileServer(http.FS(root)))
+
 	return handlers.CustomLoggingHandler(nil, SecurityHeadersHandler(mx), httpLogFormatter(y.logger))
 }
 

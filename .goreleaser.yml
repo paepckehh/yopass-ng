@@ -2,7 +2,7 @@ builds:
   -
     id: "yopass-multilang"
     binary: yopass-multilang
-    main: ./cmd/oyopass-multilang/main.go
+    main: ./cmd/yopass-multilang/main.go
     env:
       - CGO_ENABLED=0
     goos:

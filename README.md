@@ -1,4 +1,10 @@
 
+# OVERVIEW 
+[![Go Reference](https://pkg.go.dev/badge/paepcke.de/yopass-multilang.svg)](https://pkg.go.dev/paepcke.de/yopass-multilang) 
+[![Go Report Card](https://goreportcard.com/badge/paepcke.de/yopass-multilang)](https://goreportcard.com/report/paepcke.de/yopass-multilang) 
+[![SemVer](https://img.shields.io/github/v/release/paepckehh/yopass-multilang)](https://github.com/paepckehh/yopass-multilang/releases/latest)
+
+[paepcke.de/yopass-multilang](https://paepcke.de/yopass-multilang/)
 
 # YOPASS-MULTILANG
 
@@ -13,13 +19,6 @@
 - [x] security: will reduce the risk of website / file system malware / js inject by embedd all resources
 - [x] international translation support (pull requests for /locales/*.json) are welcome
 
-
-# OVERVIEW 
-[![Go Reference](https://pkg.go.dev/badge/paepcke.de/yopass-multilang.svg)](https://pkg.go.dev/paepcke.de/yopass-multilang) 
-[![Go Report Card](https://goreportcard.com/badge/paepcke.de/yopass-multilang)](https://goreportcard.com/report/paepcke.de/yopass-multilang) 
-[![SemVer](https://img.shields.io/github/v/release/paepckehh/yopass-multilang)](https://github.com/paepckehh/yopass-multilang/releases/latest)
-
-[paepcke.de/yopass-multilang](https://paepcke.de/yopass-multilang/)
 
 # ⚡️HOW TO RUN VIA GO 
 ```

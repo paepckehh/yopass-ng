@@ -21,6 +21,11 @@
 
 [paepcke.de/yopass-multilang](https://paepcke.de/yopass-multilang/)
 
+# ⚡️HOW TO RUN VIA GO 
+```
+# needs memcached (localhost:11211) to store secrets
+go run paepcke.de/yopass-multilang/cmd/yopass-multilang@latest --address="127.0.0.1" --port="8080" --memcached="localhost:11211"
+```
 
 # ⚡️HOW TO INSTALL VIA GO 
 ```
@@ -29,7 +34,6 @@ go install paepcke.de/yopass-multilang/cmd/yopass-multilang@latest
 
 # DOWNLOAD PRE-BUILD PACKAGES
 [https://github.com/paepckehh/yopass-multilang/releases](https://github.com/paepckehh/yopass-multilang/releases)
-
 
 ---
 

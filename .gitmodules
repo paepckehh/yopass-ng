@@ -1,3 +1,0 @@
-[submodule "pkg/server/static"]
-	path = pkg/server/static
-	url = https://github.com/jhaals/yopass

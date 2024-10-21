@@ -1,6 +1,15 @@
+
+
+# yopass-multilang
+
+- [x] will provide multilingual support out-of-the-box 
+- [x] follows 100% strictly & transparent verifyable upstream codebase
+- [x] all changes (pull requests) outside of website/public/locales will be denied
+- [x] international translation support (pull requests) are welcome
+
+
 ---
-yopass fork, follows 100% strictly upstream, but will provide multilingual support out-of-the-box 
----
+
 ![Yopass-horizontal](https://user-images.githubusercontent.com/37777956/59544367-0867aa80-8f09-11e9-8d6a-02008e1bccc7.png)
 
 # Yopass - Share Secrets Securely

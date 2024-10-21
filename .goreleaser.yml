@@ -1,0 +1,46 @@
+builds:
+  -
+    id: "yopass-multilang"
+    binary: yopass-multilang
+    main: ./cmd/oyopass-multilang/main.go
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - freebsd
+      - darwin
+      - netbsd
+      - openbsd
+      - windows
+    goarch:
+      - amd64
+      - arm
+      - arm64
+    goarm:
+      - 7
+archives:
+  -
+    id: yopass-multilang-binaries
+    name_template: "yopass-multilang-{{ .Os }}_{{ .Arch }}_{{ .Version }}"
+    files:
+      - LICENSE
+      - README.md
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+nfpms:
+  -
+    file_name_template: "yopass-multilang_package_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    vendor: Michael Paepcke
+    homepage: https://paepcke.de/yopass-multilang
+    maintainer: Michael Paepcke <git@paepcke.de>
+    description: yopass-multilang
+    license: Apache 2.0 
+    formats:
+      - deb
+      - rpm

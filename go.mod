@@ -1,4 +1,4 @@
-module github.com/jhaals/yopass
+module paepcke.de/yopass-multilang
 
 go 1.21
 

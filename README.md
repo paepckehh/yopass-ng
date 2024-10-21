@@ -3,10 +3,9 @@
 # yopass-multilang
 
 - [x] will provide multilingual support out-of-the-box 
-- [x] follows 100% strictly & transparent verifyable upstream codebase
+- [x] follows strict, transparent & verifyable upstream codebase 
 - [x] all changes (pull requests) outside of website/public/locales will be denied
 - [x] international translation support (pull requests) are welcome
-
 
 ---
 

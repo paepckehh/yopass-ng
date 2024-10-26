@@ -1,10 +1,10 @@
 
 # OVERVIEW 
-[![Go Reference](https://pkg.go.dev/badge/paepcke.de/yopass-multilang.svg)](https://pkg.go.dev/paepcke.de/yopass-multilang) 
-[![Go Report Card](https://goreportcard.com/badge/paepcke.de/yopass-multilang)](https://goreportcard.com/report/paepcke.de/yopass-multilang) 
-[![SemVer](https://img.shields.io/github/v/release/paepckehh/yopass-multilang)](https://github.com/paepckehh/yopass-multilang/releases/latest)
+[![Go Reference](https://pkg.go.dev/badge/paepcke.de/yopass-ng.svg)](https://pkg.go.dev/paepcke.de/yopass-ng) 
+[![Go Report Card](https://goreportcard.com/badge/paepcke.de/yopass-ng)](https://goreportcard.com/report/paepcke.de/yopass-ng) 
+[![SemVer](https://img.shields.io/github/v/release/paepckehh/yopass-ng)](https://github.com/paepckehh/yopass-ng/releases/latest)
 
-[paepcke.de/yopass-multilang](https://paepcke.de/yopass-multilang/)
+[paepcke.de/yopass-ng](https://paepcke.de/yopass-ng/)
 
 # YOPASS-NG 
 
@@ -26,16 +26,16 @@
 # ⚡️HOW TO RUN VIA GO 
 ```
 # needs memcached (localhost:11211) to store secrets
-go run paepcke.de/yopass-multilang/cmd/yopass-multilang@latest --address="127.0.0.1" --port="8080" --memcached="localhost:11211"
+go run paepcke.de/yopass-ng/cmd/yopass-ng@latest --address="127.0.0.1" --port="8080" --memcached="localhost:11211"
 ```
 
 # ⚡️HOW TO INSTALL VIA GO 
 ```
-go install paepcke.de/yopass-multilang/cmd/yopass-multilang@latest
+go install paepcke.de/yopass-ng/cmd/yopass-ng@latest
 ```
 
 # DOWNLOAD PRE-BUILD PACKAGES
-[https://github.com/paepckehh/yopass-multilang/releases](https://github.com/paepckehh/yopass-multilang/releases)
+[https://github.com/paepckehh/yopass-ng/releases](https://github.com/paepckehh/yopass-ng/releases)
 
 ---
 

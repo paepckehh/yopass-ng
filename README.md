@@ -6,12 +6,15 @@
 
 [paepcke.de/yopass-multilang](https://paepcke.de/yopass-multilang/)
 
-# YOPASS-MULTILANG
+# YOPASS-NG 
 
 [github.com/jhaals/yopass](https://github.com/jhaals/yopass) as convinient, all-in-one embedded, multilingual & secure single binary
 
-- [x] will provide multilingual http server out-of-the-box 
-- [x] one single easy to handle static binary (needs only memchached or redis db)
+- [x] is not a fork
+- [x] think intelligent convenient pre-build vendoring & hardening into on single binary
+- [x] will provide multilingual http server out-of-the-box, no dependencies
+- [x] no file system access needed, everything pre-cached from memory
+- [x] one single easy to handle static binary only (needs only memchached or redis db)
 - [x] will have no external file system dependencies, all website resources are embedded
 - [x] follows strict, transparent & verifyable the upstream codebase
 - [x] easy to diff & transparently to review minimal codebase changes 

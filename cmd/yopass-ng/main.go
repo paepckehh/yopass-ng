@@ -21,7 +21,7 @@ import (
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
-	"paepcke.de/yopass-multilang/pkg/server"
+	"paepcke.de/yopass-ng/pkg/server"
 )
 
 var logLevel zapcore.Level

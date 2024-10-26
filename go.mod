@@ -1,14 +1,14 @@
-module paepcke.de/yopass-multilang
+module paepcke.de/yopass-ng
 
 go 1.21
 
 require (
-	github.com/bradfitz/gomemcache v0.0.0-20190913173617-a41fca850d0b
+	github.com/bradfitz/gomemcache v0.0.0-20230905024940-24af94b03874
 	github.com/go-redis/redis/v7 v7.4.1
 	github.com/gofrs/uuid v4.4.0+incompatible
 	github.com/gorilla/handlers v1.5.2
 	github.com/gorilla/mux v1.8.1
-	github.com/jhaals/yopass v0.0.0-20241021041257-b847748d0a01
+	github.com/jhaals/yopass v0.0.0-20241025042746-430c5accbee5
 	github.com/prometheus/client_golang v1.20.5
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.19.0

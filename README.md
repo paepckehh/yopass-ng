@@ -3,6 +3,7 @@
 [![Go Reference](https://pkg.go.dev/badge/paepcke.de/yopass-ng.svg)](https://pkg.go.dev/paepcke.de/yopass-ng) 
 [![Go Report Card](https://goreportcard.com/badge/paepcke.de/yopass-ng)](https://goreportcard.com/report/paepcke.de/yopass-ng) 
 [![SemVer](https://img.shields.io/github/v/release/paepckehh/yopass-ng)](https://github.com/paepckehh/yopass-ng/releases/latest)
+[![License](https://img.shields.io/github/license/paepckehh/yopass-ng)](https://github.com/paepckehh/yopass-ng/blob/master/LICENSE)
 
 [paepcke.de/yopass-ng](https://paepcke.de/yopass-ng/)
 

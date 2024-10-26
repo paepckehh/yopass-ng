@@ -9,7 +9,7 @@
 
 # YOPASS-NG 
 
-[github.com/jhaals/yopass](https://github.com/jhaals/yopass) as convinient, all-in-one embedded, multilingual & secure single binary
+[github.com/jhaals/yopass](https://github.com/jhaals/yopass) as convenient, all-in-one embedded, multilingual, secure single binary
 
 - [x] is not a fork
 - [x] think intelligent convenient pre-build vendoring & hardening into on single binary

@@ -11,18 +11,8 @@
 
 [github.com/jhaals/yopass](https://github.com/jhaals/yopass) as convenient, all-in-one embedded, multilingual, secure single binary
 
-- [x] is not a fork
-- [x] think intelligent convenient pre-build vendoring & hardening into on single binary
-- [x] will provide multilingual http server out-of-the-box, no dependencies
+- [x] think intelligent convenient pre-build vendoring & hardening into a single multilang hardenend binary
 - [x] no file system access needed, everything pre-cached from memory
-- [x] one single easy to handle static binary only (needs only memchached or redis db)
-- [x] will have no external file system dependencies, all website resources are embedded
-- [x] follows strict, transparent & verifyable the upstream codebase
-- [x] easy to diff & transparently to review minimal codebase changes 
-- [x] security: will by default apply a hardened http/tls13 profile (disable via --tls-hardening=false)  
-- [x] security: will reduce the risk of website / file system malware / js inject by embedd all resources
-- [x] international translation support (pull requests for /locales/*.json) are welcome
-
 
 # ⚡️HOW TO RUN VIA GO 
 ```
@@ -48,26 +38,45 @@ docker pull ghcr.io/paepckehh/yopass-ng:latest
 see yopass-ng.nix
 
 ```
-services = {
-  memcached = {
-    enable = true;
-    maxConnections = 16; # max conncurrent r/w sessions
-    maxMemory = 512; # max storage alloc in mb (megabytes)
+{
+  config,
+  pkgs,
+  ...
+}: {
+  ####################
+  #-=# NETWORKING #=-#
+  ####################
+  networking = {
+    firewall = {
+      allowedTCPPorts = [8443]; # open port 8443 on all interfaces
+    };
   };
-};
-networking.firewall.allowedTCPPorts = [8443]; # open port 8443
-virtualisation = {
-  oci-containers = {
-    backend = "podman";
-    containers = {
-      yopass-ng = {
-         image = "ghcr.io/paepckehh/yopass-ng"; # bind to all interfaces, port 8443
-         cmd = ["--address=0.0.0.0" "--port=8282" "--metrics-port=9144" "--database=memcached" "--memcached=localhost:11211"];
-         extraOptions = ["--network=host"];
+  ##################
+  #-=# SERVICES #=-#
+  ##################
+  services = {
+    memcached = {
+      enable = true;
+      maxConnections = 16; # 
+      maxMemory = 512; # max storage alloc in mb (megabytes)
+    };
+  };
+  ########################
+  #-=# VIRTUALISATION #=-#
+  ########################
+  virtualisation = {
+    oci-containers = {
+      backend = "podman";
+      containers = {
+        yo = {
+          image = "ghcr.io/paepckehh/yopass-ng"; # bind to all interfaces, port 8443
+          cmd = ["--address=0.0.0.0" "--port=8282" "--metrics-port=9144" "--database=memcached" "--memcached=localhost:11211"];
+          extraOptions = ["--network=host"];
+        };
       };
     };
   };
-};
+}
 ```
 
 ---

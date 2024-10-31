@@ -17,7 +17,7 @@
   services = {
     memcached = {
       enable = true;
-      maxConnections = 16; # max conncurrent r/w sessions
+      maxConnections = 16; # 
       maxMemory = 512; # max storage alloc in mb (megabytes)
     };
   };

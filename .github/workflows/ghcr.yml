@@ -10,17 +10,17 @@ jobs:
        packages: write
     steps:
       - name: Checkout repository
-        uses: actions/checkout@latest
+        uses: actions/checkout
 
       - name: Log in to the Container registry
-        uses: docker/login-action@latest
+        uses: docker/login-action
         with:
           registry: https://ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@latest
+        uses: docker/build-push-action
         with:
           push: true
           tags: ghcr.io/paepckehh/yopass-ng:latest

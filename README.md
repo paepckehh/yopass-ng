@@ -35,10 +35,43 @@ go run paepcke.de/yopass-ng/cmd/yopass-ng@latest --address="127.0.0.1" --port="8
 go install paepcke.de/yopass-ng/cmd/yopass-ng@latest
 ```
 
-# DOWNLOAD PRE-BUILD PACKAGES
+# ⚡️DOWNLOAD PRE-BUILD PACKAGES
 [https://github.com/paepckehh/yopass-ng/releases](https://github.com/paepckehh/yopass-ng/releases)
 
+
+# ⚡️DOCKER
+```
+docker pull ghcr.io/paepckehh/yopass-ng:latest
+```
+
+# NIXOS SYSTEM SERVICE VIA DOCKER
+see yopass-ng.nix
+
+```
+services = {
+  memcached = {
+    enable = true;
+    maxConnections = 16; # max conncurrent r/w sessions
+    maxMemory = 512; # max storage alloc in mb (megabytes)
+  };
+};
+networking.firewall.allowedTCPPorts = [8443]; # open port 8443
+virtualisation = {
+  oci-containers = {
+    backend = "podman";
+    containers = {
+      yopass-ng = {
+         image = "ghcr.io/paepckehh/yopass-ng"; # bind to all interfaces, port 8443
+         cmd = ["--address=0.0.0.0" "--port=8282" "--metrics-port=9144" "--database=memcached" "--memcached=localhost:11211"];
+         extraOptions = ["--network=host"];
+      };
+    };
+  };
+};
+```
+
 ---
+
 
 ![Yopass-horizontal](https://user-images.githubusercontent.com/37777956/59544367-0867aa80-8f09-11e9-8d6a-02008e1bccc7.png)
 

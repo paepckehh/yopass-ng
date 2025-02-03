@@ -40,7 +40,7 @@
     "title": "Geheimnis in Datenbank gespeichert",
     "subtitleDownloadOnce": "Bedenken Sie, dass auf ein Geheimnis möglicherweise nur einmal verwendet werden kann. Öffnen Sie den Link nicht selbst.",
     "subtitleChannel": "Für zusätzliche Sicherheit, kann der Schlüssel auf einem anderen Kanal übermittelt werden.",
-    "rowLabelOneClick": "Einmal-Link",
+    "rowLabelOneClick": "Ein-Klick-Link",
     "rowLabelShortLink": "Kurzlink",
     "rowLabelDecryptionKey": "Dechiffrierschlüssel"
   },
@@ -63,7 +63,7 @@
     "createdBy": "Erstellt von",
     "translatedBy": "Übersetzt von",
     "translatorName": "PVZ",
-    "translatorLink": "https://github.com/pvz"
+    "translatorLink": "https://github.com/pvz-digital"
   },
   "expiration": {
     "legend": "Die verschlüsselte Nachricht wird automatisch gelöscht nach",

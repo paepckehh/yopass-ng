@@ -1,4 +1,4 @@
-FROM golang:bookworm as app
+FROM golang:1.23 as app
 RUN mkdir -p /yopass
 WORKDIR /yopass
 COPY . .

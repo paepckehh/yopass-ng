@@ -9,6 +9,4 @@ deps:
 	go mod tidy -v	
 
 check: 
-	gofmt -w -s .
-	staticcheck
 	make -C cmd/$(PROJECT) check

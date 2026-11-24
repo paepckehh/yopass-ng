@@ -2768,12 +2768,10 @@ i18next-http-backend@^4.0.4:
   resolved "https://registry.yarnpkg.com/i18next-http-backend/-/i18next-http-backend-4.0.4.tgz#0e6c43f28ad621de998db3b763ed1051af202881"
   integrity sha512-nG9OQKvUsPiTVUBg1rCGmvmWhzxC9GOxVbGdTYyejHVMSUjutt1hiBNVSzhB/ZE7keL9Xkb880kUfhDovV5T5g==
 
-i18next@^23.16.2:
-  version "23.16.2"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-23.16.2.tgz#ef6868ef6ac7bcaee4f5fe35132021d44e8d1063"
-  integrity sha512-dFyxwLXxEQK32f6tITBMaRht25mZPJhQ0WbC0p3bO2mWBal9lABTMqSka5k+GLSRWLzeJBKDpH7BeIA9TZI7Jg==
-  dependencies:
-    "@babel/runtime" "^7.23.2"
+i18next@^26.3.4:
+  version "26.3.4"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-26.3.4.tgz#a2e8540b0a1a6004eba525c05faa89c256fb57c8"
+  integrity sha512-pa7m0d7pBDqGHZxljT+WPFeyFgQ7P7SciPPo1tTqYuO0z4sqADYhwnBESmmGp/wEof1inwdls/k8ZgTg8rxFHA==
 
 ieee754@^1.1.13:
   version "1.2.1"
